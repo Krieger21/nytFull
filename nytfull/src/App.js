@@ -63,9 +63,10 @@ class App extends Component {
   }
 
   removeArticle = (x) => {
-    let index = x - 1
+    let index = this.arr.indexOf(x)
     console.log(this.state.saved)
-    this.state.saved.splice(index)
+    this.arr.splice(index)
+    this.setState({ saved: this.arr })
   }
 
   render() {
